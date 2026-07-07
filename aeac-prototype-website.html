@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affordable Everyday AI Consulting</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #5f6b7a;
+      --soft: #f4f7fb;
+      --panel: #ffffff;
+      --accent: #3268a8;
+      --accent-dark: #244f82;
+      --line: #d9e2ec;
+      --warm: #f7efe5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--soft);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffffff 0%, #eaf2fb 100%);
+      padding: 64px 24px 48px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 56px;
+      gap: 24px;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .hero {
+      max-width: 820px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.82rem;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      line-height: 0.98;
+      margin: 0 0 24px;
+      letter-spacing: -0.06em;
+    }
+
+    .lead {
+      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: background 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+    }
+
+    main {
+      padding: 56px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 12px 32px rgba(31, 41, 51, 0.06);
+    }
+
+    section + section {
+      margin-top: 32px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 1.1;
+      margin: 0 0 16px;
+      letter-spacing: -0.03em;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .price-box {
+      background: var(--warm);
+      border-radius: 20px;
+      padding: 24px;
+      margin-top: 24px;
+      border: 1px solid #eadbc8;
+    }
+
+    .price {
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .steps {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .steps li {
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 0.92rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #c7d2df;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font: inherit;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .submit {
+      border: none;
+      cursor: pointer;
+      background: var(--accent);
+      color: white;
+      border-radius: 999px;
+      padding: 14px 20px;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+
+    footer {
+      padding: 32px 0 56px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 820px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 40px;
+      }
+
+      .grid,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding-top: 40px;
+      }
+
+      section {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">Affordable Everyday AI Consulting</div>
+        <a href="#contact">Request a Consultation</a>
+      </div>
+
+      <div class="hero">
+        <div class="eyebrow">Personal AI help for real-life tasks</div>
+        <h1>Learn how to use AI to save time, get organized, and move your goals forward.</h1>
+        <p class="lead">
+          Affordable Everyday AI Consulting helps individuals and small startups use AI confidently for everyday needs like email organization, resume formatting, business planning, brainstorming, and productivity.
+        </p>
+        <a class="button" href="#contact">Start with a 15-minute consult</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <div>
+        <section>
+          <h2>AI consulting that teaches you how to fish.</h2>
+          <p>
+            This is not enterprise consulting, and it is not a one-size-fits-all prompt pack. AEAC is designed for people who know AI can help them, but need a practical guide to show them where to start and how to use it well.
+          </p>
+          <p>
+            Each session focuses on a real task you want to accomplish. You leave with a custom AI prompt or workflow, simple instructions, and a better understanding of how to use AI on your own.
+          </p>
+
+          <div class="cards">
+            <div class="card">
+              <h3>Email & productivity</h3>
+              <p>Summarize messages, organize inboxes, draft replies, and create repeatable workflows.</p>
+            </div>
+            <div class="card">
+              <h3>Career support</h3>
+              <p>Format resumes, improve LinkedIn content, prepare for interviews, and tailor applications.</p>
+            </div>
+            <div class="card">
+              <h3>Business planning</h3>
+              <p>Structure business plans, clarify offers, brainstorm ideas, and organize next steps.</p>
+            </div>
+            <div class="card">
+              <h3>Everyday tasks</h3>
+              <p>Plan trips, compare options, create templates, organize notes, and simplify decisions.</p>
+            </div>
+          </div>
+
+          <div class="price-box">
+            <div class="price">$100</div>
+            <p><strong>AI Quick Start Session</strong></p>
+            <p>Includes a 15-minute consultation, one customized prompt or AI workflow, and simple instructions so you can keep using it after the session.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>About the Founder</h2>
+          <p>
+            Hi, I'm Tiffani. I'm a product leader with more than a decade of experience helping organizations solve complex problems through technology, digital strategy, and customer-centered design.
+          </p>
+          <p>
+            Affordable Everyday AI Consulting began in a very personal way. My mother, sister, friends, and extended family needed help using AI to organize their emails, generate formatted resumes, build business plans, and tackle everyday tasks more efficiently.
+          </p>
+          <p>
+            As I helped them, I discovered that I loved not only helping them complete their tasks, but also showing them how to use AI to accomplish their goals quickly and confidently.
+          </p>
+          <p>
+            My philosophy is simple: I do not just want to solve today's problem. I want to help you build the confidence to solve tomorrow's.
+          </p>
+        </section>
+      </div>
+
+      <aside>
+        <section id="contact">
+          <h2>Request a Consultation</h2>
+          <p class="form-note">
+            Tell me what you need help with. This prototype form is ready to connect to tools like Tally, Google Forms, Formspree, Squarespace, Wix, or your future website backend.
+          </p>
+
+          <form>
+            <div>
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" />
+            </div>
+
+            <div>
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" />
+            </div>
+
+            <div>
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="Optional" />
+            </div>
+
+            <div>
+              <label for="client-type">I am reaching out as a...</label>
+              <select id="client-type" name="client-type">
+                <option value="">Select one</option>
+                <option>Individual</option>
+                <option>Small Startup</option>
+                <option>Small Business</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="need">What do you need help with?</label>
+              <select id="need" name="need">
+                <option value="">Select one</option>
+                <option>Email organization or summaries</option>
+                <option>Resume or career documents</option>
+                <option>Business plan or startup support</option>
+                <option>Prompt creation</option>
+                <option>Everyday productivity</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="details">Describe your task or goal</label>
+              <textarea id="details" name="details" placeholder="What are you trying to accomplish?"></textarea>
+            </div>
+
+            <div>
+              <label for="outcome">What would success look like?</label>
+              <textarea id="outcome" name="outcome" placeholder="Example: I want a reusable prompt that helps me summarize weekly emails."></textarea>
+            </div>
+
+            <div>
+              <label for="promo">Promo Code</label>
+              <input id="promo" name="promo" type="text" placeholder="Optional" />
+            </div>
+
+            <button class="submit" type="button">Submit Request</button>
+          </form>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Affordable Everyday AI Consulting. Practical AI help for everyday goals.
+    </div>
+  </footer>
+</body>
+</html>
