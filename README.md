@@ -1,10 +1,10 @@
-# Affordable Everyday AI Consulting (AEAC)
+# Affordable Everyday AI Consulting (AEAI)
 
-Welcome to the official website repository for **Affordable Everyday AI Consulting (AEAC).**
+Welcome to the official website repository for **Affordable Everyday AI Consulting (AEAI).**
 
 ## About
 
-Affordable Everyday AI Consulting helps individuals and small startups use artificial intelligence to solve everyday challenges. Whether you're organizing your inbox, creating a professional resume, developing a business plan, or improving productivity, AEAC provides affordable, personalized AI consulting designed to teach you how to use AI with confidence.
+Affordable Everyday AI Consulting helps individuals and small startups use artificial intelligence to solve everyday challenges. Whether you're organizing your inbox, creating a professional resume, developing a business plan, or improving productivity, AEAI provides affordable, personalized AI consulting designed to teach you how to use AI with confidence.
 
 ## Mission
 
@@ -22,13 +22,13 @@ To make artificial intelligence practical, approachable, and affordable for ever
 
 ## Website
 
-This repository contains the source code for the AEAC landing page.
+This repository contains the source code for the AEAI landing page.
 
 ## Founder
 
 Tiffani
 
-Product Leader | Digital Growth Strategist | AI Consultant
+AI Consultant | Product Leader | Digital Growth Strategist
 
 ---
 
