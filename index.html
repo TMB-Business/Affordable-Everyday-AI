@@ -49,8 +49,8 @@
     }
 
     .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; }
-    .brand { font-weight:800; letter-spacing:0.02em; }
-    .nav a { color: rgba(255,255,255,0.95); text-decoration:none; font-weight:700; }
+    .brand { font-weight:800; letter-spacing:0.02em; line-height:1.05; }
+    .nav a { color: rgba(255,255,255,0.95); text-decoration:none; font-weight:700; line-height:1.05; }
 
     .nav .cta { background: var(--color-bright-coral); color:var(--color-white); padding:10px 16px; border-radius:999px; text-decoration:none; }
     .nav .cta:hover { filter:brightness(.98); }
@@ -97,8 +97,11 @@
 
     .card:focus-within, .card:hover { transform:translateY(-4px); transition: transform 160ms ease, box-shadow 160ms ease; box-shadow: 0 12px 30px rgba(23,48,66,0.08); }
 
+    /* Price and callout */
     .price-box { background: linear-gradient(180deg, var(--color-warm-cream), #fff); border-radius:20px; padding:20px; margin-top:18px; border:1px solid rgba(23,48,66,0.06); }
-    .price { font-size:2.4rem; font-weight:800; color:var(--color-deep-ink); }
+    .price-row { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .price-row .price-title { font-size:2.4rem; font-weight:800; color:var(--color-deep-ink); }
+    .price-badge { background:var(--color-bright-coral); color:var(--color-white); padding:8px 14px; border-radius:999px; font-weight:800; font-size:1rem; white-space:nowrap; }
     .price-list { margin:12px 0 0 20px; }
 
     .form-note { color:var(--muted); }
@@ -111,6 +114,7 @@
       .grid { grid-template-columns:1fr; }
       .cards { grid-template-columns:1fr; }
       header { padding:18px 16px; }
+      .price-row { flex-direction:column; align-items:flex-start; gap:8px; }
     }
 
     @media (prefers-reduced-motion: no-preference) {
@@ -137,7 +141,7 @@
       <div class="hero-text">
         <div class="eyebrow">AI Solutions for Real Life</div>
         <h1>Let’s get that task off your list.</h1>
-        <p class="lead">Affordable, one-on-one AI help that gets the work done—and shows you what to reuse next time.</p>
+        <p class="lead">Affordable, one-on-one AI help that gets the work done and shows you what to reuse next time.</p>
 
         <div class="hero-actions">
           <a class="button" href="#contact">Tell Us What You Need</a>
@@ -159,7 +163,7 @@
     <div class="grid">
       <div>
         <section>
-          <h2>Get the result—and know what worked.</h2>
+          <h2>Get the result and know what worked.</h2>
           <p>AEAI starts with the task you need completed. We do the work with you, deliver the result, and explain the useful parts in plain language so you can reuse them next time.</p>
           <p>Results come first; teaching happens naturally as part of the work. You don’t need to learn AI ahead of time—just tell us the task and we’ll handle the rest.</p>
 
@@ -198,14 +202,17 @@
           </div>
 
           <div class="price-box" aria-labelledby="everyday-win">
-            <div id="everyday-win" class="price">The Everyday Win — $100</div>
+            <div id="everyday-win" class="price-row">
+              <div class="price-title">The Everyday Win</div>
+              <div class="price-badge" aria-hidden="true">Starting at $100</div>
+            </div>
             <ul class="price-list">
               <li>15-minute initial consultation</li>
               <li>One clearly scoped task</li>
               <li>A completed deliverable</li>
               <li>Plain-language walkthrough</li>
               <li>Reusable prompt, checklist, or guide</li>
-              <li>One-time payment — no subscription</li>
+              <li>One-time payment; no subscription</li>
             </ul>
           </div>
         </section>
