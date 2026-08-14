@@ -60,186 +60,194 @@
 
     .hero-wrap { display:grid; grid-template-columns: 1fr 520px; gap:32px; align-items:center; padding:12px 0; }
     .hero-text .eyebrow { color: var(--color-clear-sky); font-weight:800; text-transform:uppercase; letter-spacing:0.08em; font-size:0.82rem; margin-bottom:12px; }
-    .hero-text h1 { font-size:clamp(2.4rem,6vw,3.6rem); margin:-9px 0 18px; color:var(--color-deep-ink); }
+-    .hero-text h1 { font-size:clamp(2.4rem,6vw,3.6rem); margin:-9px 0 18px; color:var(--color-deep-ink); }
++    /* Remove negative top margin (caused header overlap) and tighten line-height for wrapped lines */
++    .hero-text h1 { font-size:clamp(2.4rem,6vw,3.6rem); margin:0 0 18px; color:var(--color-deep-ink); line-height:1.04; }
     .hero-text .lead { color:var(--muted); font-size:1.05rem; margin-bottom:20px; }
 
-    .hero-actions { display:flex; gap:12px; align-items:center; }
-    .button { display:inline-block; background:var(--color-bright-coral); color:var(--color-white); text-decoration:none; padding:12px 18px; border-radius:var(--radius-pill); font-weight:800; }
-    .button.secondary { background:transparent; border:2px solid var(--color-deep-teal); color:var(--color-deep-teal); }
-    .button:focus, a:focus { outline: 3px solid var(--color-clear-sky); outline-offset:3px; }
+-    .hero-actions { display:flex; gap:12px; align-items:center; }
+-    .button { display:inline-block; background:var(--color-bright-coral); color:var(--color-white); text-decoration:none; padding:12px 18px; border-radius:var(--radius-pill); font-weight:800; }
+-    .button.secondary { background:transparent; border:2px solid var(--color-deep-teal); color:var(--color-deep-teal); }
++    /* Ensure CTA pills are visually symmetrical */
++    .hero-actions { display:flex; gap:12px; align-items:center; }
++    .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:var(--color-bright-coral); color:var(--color-white); text-decoration:none; padding:12px 18px; border-radius:var(--radius-pill); font-weight:800; line-height:1; min-height:44px; }
++    .button.secondary { background:transparent; border:2px solid var(--color-deep-teal); color:var(--color-deep-teal); }
+     .button:focus, a:focus { outline: 3px solid var(--color-clear-sky); outline-offset:3px; }
 
-    .hero-media { width:100%; max-width:520px; border-radius:16px; overflow:hidden; box-shadow: 0 10px 30px rgba(23,48,66,0.08); }
-    .hero-media img { width:100%; height:auto; display:block; }
+     .hero-media { width:100%; max-width:520px; border-radius:16px; overflow:hidden; box-shadow: 0 10px 30px rgba(23,48,66,0.08); }
+     .hero-media img { width:100%; height:auto; display:block; }
 
-    .grid { display:grid; grid-template-columns: 1.05fr 0.95fr; gap:32px; align-items:start; }
+     .grid { display:grid; grid-template-columns: 1.05fr 0.95fr; gap:32px; align-items:start; }
 
-    section { background:var(--panel); border-radius:var(--radius-lg); padding:28px; border:1px solid var(--line); box-shadow: 0 12px 32px rgba(23,48,66,0.04); }
-    h2 { font-size:1.6rem; margin:0 0 10px; color:var(--color-deep-ink); }
-    h3 { margin:0 0 8px; }
-    p { margin:0 0 12px; color:var(--muted); }
+     section { background:var(--panel); border-radius:var(--radius-lg); padding:28px; border:1px solid var(--line); box-shadow: 0 12px 32px rgba(23,48,66,0.04); }
+     h2 { font-size:1.6rem; margin:0 0 10px; color:var(--color-deep-ink); }
+     h3 { margin:0 0 8px; }
+     p { margin:0 0 12px; color:var(--muted); }
 
-    /* How We Help cards */
-    .cards { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:18px; }
-    .card { border-radius:var(--radius-md); padding:16px; display:flex; gap:12px; align-items:flex-start; }
-    .card .icon { width:56px; height:56px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; }
-    .card h3 { margin:0 0 6px; }
+     /* How We Help cards */
+     .cards { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:18px; }
+     .card { border-radius:var(--radius-md); padding:16px; display:flex; gap:12px; align-items:flex-start; }
+     .card .icon { width:56px; height:56px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; }
+     .card h3 { margin:0 0 6px; }
 
-    .card--coral { background:linear-gradient(180deg, rgba(255,107,94,0.06), rgba(255,255,255,0)); border:1px solid rgba(255,107,94,0.08); }
-    .card--coral .icon { background: var(--color-bright-coral); color: var(--color-deep-ink); }
+     .card--coral { background:linear-gradient(180deg, rgba(255,107,94,0.06), rgba(255,255,255,0)); border:1px solid rgba(255,107,94,0.08); }
+     .card--coral .icon { background: var(--color-bright-coral); color: var(--color-deep-ink); }
 
-    .card--gold { background:linear-gradient(180deg, rgba(255,200,87,0.06), rgba(255,255,255,0)); border:1px solid rgba(255,200,87,0.08); }
-    .card--gold .icon { background: var(--color-sunny-gold); color: var(--color-deep-ink); }
+     .card--gold { background:linear-gradient(180deg, rgba(255,200,87,0.06), rgba(255,255,255,0)); border:1px solid rgba(255,200,87,0.08); }
+     .card--gold .icon { background: var(--color-sunny-gold); color: var(--color-deep-ink); }
 
-    .card--sky { background:linear-gradient(180deg, rgba(76,201,240,0.06), rgba(255,255,255,0)); border:1px solid rgba(76,201,240,0.08); }
-    .card--sky .icon { background: var(--color-clear-sky); color: var(--color-deep-ink); }
+     .card--sky { background:linear-gradient(180deg, rgba(76,201,240,0.06), rgba(255,255,255,0)); border:1px solid rgba(76,201,240,0.08); }
+     .card--sky .icon { background: var(--color-clear-sky); color: var(--color-deep-ink); }
 
-    .card--teal { background:linear-gradient(180deg, rgba(11,93,86,0.06), rgba(255,255,255,0)); border:1px solid rgba(11,93,86,0.06); }
-    .card--teal .icon { background: var(--color-deep-teal); color: var(--color-white); }
+     .card--teal { background:linear-gradient(180deg, rgba(11,93,86,0.06), rgba(255,255,255,0)); border:1px solid rgba(11,93,86,0.06); }
+     .card--teal .icon { background: var(--color-deep-teal); color: var(--color-white); }
 
-    .card:focus-within, .card:hover { transform:translateY(-4px); transition: transform 160ms ease, box-shadow 160ms ease; box-shadow: 0 12px 30px rgba(23,48,66,0.08); }
+     .card:focus-within, .card:hover { transform:translateY(-4px); transition: transform 160ms ease, box-shadow 160ms ease; box-shadow: 0 12px 30px rgba(23,48,66,0.08); }
 
-    /* Price and callout */
-    .price-box { background: linear-gradient(180deg, var(--color-warm-cream), #fff); border-radius:20px; padding:20px; margin-top:18px; border:1px solid rgba(23,48,66,0.06); }
-    .price-row { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
-    .price-row .price-title { font-size:2.4rem; font-weight:800; color:var(--color-deep-ink); margin:0; }
-    .price-badge { background:var(--color-bright-coral); color:var(--color-white); padding:8px 14px; border-radius:999px; font-weight:800; font-size:1rem; white-space:nowrap; margin-top:0; }
-    .price-list { margin:12px 0 0 20px; }
+     /* Price and callout */
+     .price-box { background: linear-gradient(180deg, var(--color-warm-cream), #fff); border-radius:20px; padding:20px; margin-top:18px; border:1px solid rgba(23,48,66,0.06); }
+     .price-row { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+     .price-row .price-title { font-size:2.4rem; font-weight:800; color:var(--color-deep-ink); margin:0; }
+     .price-badge { background:var(--color-bright-coral); color:var(--color-white); padding:8px 14px; border-radius:999px; font-weight:800; font-size:1rem; white-space:nowrap; margin-top:0; }
+     .price-list { margin:12px 0 0 20px; }
 
-    .form-note { color:var(--muted); }
-    a.button:focus { box-shadow:0 0 0 4px rgba(76,201,240,0.12); }
+     .form-note { color:var(--muted); }
+     a.button:focus { box-shadow:0 0 0 4px rgba(76,201,240,0.12); }
 
-    footer { padding:28px 0 56px; color:var(--muted); text-align:center; font-size:0.95rem; }
+     footer { padding:28px 0 56px; color:var(--muted); text-align:center; font-size:0.95rem; }
 
-    @media (max-width: 980px) {
-      .hero-wrap { grid-template-columns: 1fr; }
-      .grid { grid-template-columns:1fr; }
-      .cards { grid-template-columns:1fr; }
-      header { padding:18px 16px; }
-      .price-row { flex-direction:column; align-items:flex-start; gap:8px; }
-    }
+     @media (max-width: 980px) {
+       .hero-wrap { grid-template-columns: 1fr; }
+       .grid { grid-template-columns:1fr; }
+       .cards { grid-template-columns:1fr; }
+       header { padding:18px 16px; }
+       .price-row { flex-direction:column; align-items:flex-start; gap:8px; }
+     }
 
-    @media (prefers-reduced-motion: no-preference) {
-      .card:hover { transform:translateY(-4px); }
-    }
+     @media (prefers-reduced-motion: no-preference) {
+       .card:hover { transform:translateY(-4px); }
+     }
 
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <div class="nav">
-        <div class="brand">Affordable Everyday AI Consulting</div>
-        <div>
-          <a class="nav-link" href="#contact">Tell Us What You Need  </a>
-          <a class="cta" href="https://calendly.com/tiffani-bryant1/30min" target="_blank" rel="noopener">Schedule 15-min</a>
-        </div>
-      </div>
-    </div>
-  </header>
+   </style>
+ </head>
+ <body>
+   <header>
+     <div class="container">
+       <div class="nav">
+         <div class="brand">Affordable Everyday AI Consulting</div>
+         <div>
+-          <a class="nav-link" href="#contact">Tell Us What You Need  </a>
++          <!-- Use the same CTA styling for symmetry -->
++          <a class="cta" href="#contact">Tell Us What You Need</a>
+           <a class="cta" href="https://calendly.com/tiffani-bryant1/30min" target="_blank" rel="noopener">Schedule 15-min</a>
+         </div>
+       </div>
+     </div>
+   </header>
 
-  <main class="container">
-    <div class="hero-wrap">
-      <div class="hero-text">
-        <div class="eyebrow">Your task. Our job.</div>
-        <h1>Let’s get that task off your desk.</h1>
-        <p class="lead">Helping busy people turn the tasks they don't have time, desire, or know-how to tackle into finished results - quickly, affordably, and with practical AI.</p>
+   <main class="container">
+     <div class="hero-wrap">
+       <div class="hero-text">
+         <div class="eyebrow">Your task. Our job.</div>
+         <h1>Let’s get that task off your desk.</h1>
+         <p class="lead">Helping busy people turn the tasks they don't have time, desire, or know-how to tackle into finished results - quickly, affordably, and with practical AI.</p>
 
-        <div class="hero-actions">
-          <a class="button" href="#contact">Tell Us What You Need</a>
-          <a class="button secondary" href="https://calendly.com/tiffani-bryant1/30min" target="_blank" rel="noopener">Check Our Calendar</a>
-        </div>
+         <div class="hero-actions">
+           <a class="button" href="#contact">Tell Us What You Need</a>
+           <a class="button secondary" href="https://calendly.com/tiffani-bryant1/30min" target="_blank" rel="noopener">Check Our Calendar</a>
+         </div>
 
-        <p style="margin-top:12px;color:var(--muted);font-weight:700;">Done today. Easier tomorrow.</p>
-      </div>
+         <p style="margin-top:12px;color:var(--muted);font-weight:700;">Done today. Easier tomorrow.</p>
+       </div>
 
-      <div class="hero-media" role="img" aria-label="Person working on a laptop at a home desk, looking relieved and confident; warm bright setting">
-        <picture>
-          <source type="image/webp" srcset="assets/images/hero-everyday-momentum-800.webp 800w, assets/images/hero-everyday-momentum-1200.webp 1200w, assets/images/hero-everyday-momentum.webp 2400w" sizes="(max-width:800px) 800px, (max-width:1200px) 1200px, 2400px">
-          <source type="image/jpeg" srcset="assets/images/hero-everyday-momentum-800.jpg 800w, assets/images/hero-everyday-momentum-1200.jpg 1200w, assets/images/hero-everyday-momentum.jpg 2400w" sizes="(max-width:800px) 800px, (max-width:1200px) 1200px, 2400px">
-          <img src="assets/images/hero-everyday-momentum-1200.jpg" alt="Person working on a laptop at a home desk, looking relieved and confident" width="2400" height="1350">
-        </picture>
-      </div>
-    </div>
+       <div class="hero-media" role="img" aria-label="Person working on a laptop at a home desk, looking relieved and confident; warm bright setting">
+         <picture>
+           <source type="image/webp" srcset="assets/images/hero-everyday-momentum-800.webp 800w, assets/images/hero-everyday-momentum-1200.webp 1200w, assets/images/hero-everyday-momentum.webp 240[...]"
+           <source type="image/jpeg" srcset="assets/images/hero-everyday-momentum-800.jpg 800w, assets/images/hero-everyday-momentum-1200.jpg 1200w, assets/images/hero-everyday-momentum.jpg 2400w[...]"
+           <img src="assets/images/hero-everyday-momentum-1200.jpg" alt="Person working on a laptop at a home desk, looking relieved and confident" width="2400" height="1350">
+         </picture>
+       </div>
+     </div>
 
-    <div class="grid">
-      <div>
-        <section>
-          <h2>Your task made easy.</h2>
-          <p>Simply describe your task. We'll review it, ask a few follow-up questions, and you'll be on your way - taking care of the things you enjoy. Once everything is completed, we'll contact you to review the results (and even share how we did it so quickly!) </p>        
-          <p>Results come first; learning happens naturally as part of the work. You don’t need to learn AI ahead of time. Just tell us the task and we’ll handle the rest.</p>
+     <div class="grid">
+       <div>
+         <section>
+           <h2>Your task made easy.</h2>
+           <p>Simply describe your task. We'll review it, ask a few follow-up questions, and you'll be on your way - taking care of the things you enjoy. Once everything is completed, we'll contac[...]
+           <p>Results come first; learning happens naturally as part of the work. You don’t need to learn AI ahead of time. Just tell us the task and we’ll handle the rest.</p>
 
-          <div class="cards" role="list">
-            <div class="card card--coral" role="listitem" tabindex="0">
-              <div class="icon" aria-hidden="true">✉️</div>
-              <div>
-                <h3>Email & productivity</h3>
-                <p>Summarize messages, organize inboxes, draft replies, and create repeatable workflows.</p>
-              </div>
-            </div>
+           <div class="cards" role="list">
+             <div class="card card--coral" role="listitem" tabindex="0">
+               <div class="icon" aria-hidden="true">✉️</div>
+               <div>
+                 <h3>Email & productivity</h3>
+                 <p>Summarize messages, organize inboxes, draft replies, and create repeatable workflows.</p>
+               </div>
+             </div>
 
-            <div class="card card--gold" role="listitem" tabindex="0">
-              <div class="icon" aria-hidden="true">💼</div>
-              <div>
-                <h3>Career support</h3>
-                <p>Format resumes, improve LinkedIn content, prepare for interviews, and tailor applications.</p>
-              </div>
-            </div>
+             <div class="card card--gold" role="listitem" tabindex="0">
+               <div class="icon" aria-hidden="true">💼</div>
+               <div>
+                 <h3>Career support</h3>
+                 <p>Format resumes, improve LinkedIn content, prepare for interviews, and tailor applications.</p>
+               </div>
+             </div>
 
-            <div class="card card--sky" role="listitem" tabindex="0">
-              <div class="icon" aria-hidden="true">📈</div>
-              <div>
-                <h3>Business planning</h3>
-                <p>Structure business plans, clarify offers, brainstorm ideas, and organize next steps.</p>
-              </div>
-            </div>
+             <div class="card card--sky" role="listitem" tabindex="0">
+               <div class="icon" aria-hidden="true">📈</div>
+               <div>
+                 <h3>Business planning</h3>
+                 <p>Structure business plans, clarify offers, brainstorm ideas, and organize next steps.</p>
+               </div>
+             </div>
 
-            <div class="card card--teal" role="listitem" tabindex="0">
-              <div class="icon" aria-hidden="true">✅</div>
-              <div>
-                <h3>Everyday tasks</h3>
-                <p>Plan trips, compare options, create templates, organize notes, and simplify decisions.</p>
-              </div>
-            </div>
-          </div>
+             <div class="card card--teal" role="listitem" tabindex="0">
+               <div class="icon" aria-hidden="true">✅</div>
+               <div>
+                 <h3>Everyday tasks</h3>
+                 <p>Plan trips, compare options, create templates, organize notes, and simplify decisions.</p>
+               </div>
+             </div>
+           </div>
 
-          <div class="price-box" aria-labelledby="everyday-win">
-            <div id="everyday-win" class="price-row">
-              <div class="price-title">The Everyday Win</div>
-              <div class="price-badge" aria-hidden="true">Starting at $100</div>
-            </div>
-            <ul class="price-list">
-              <li>15-minute initial consultation</li>
-              <li>One clearly scoped task</li>
-              <li>A completed deliverable</li>
-              <li>Plain-language walkthrough</li>
-              <li>Reusable prompt, checklist, or guide</li>
-              <li>One-time payment; no subscription</li>
-            </ul>
-          </div>
-        </section>
+           <div class="price-box" aria-labelledby="everyday-win">
+             <div id="everyday-win" class="price-row">
+               <div class="price-title">The Everyday Win</div>
+               <div class="price-badge" aria-hidden="true">Starting at $100</div>
+             </div>
+             <ul class="price-list">
+               <li>15-minute initial consultation</li>
+               <li>One clearly scoped task</li>
+               <li>A completed deliverable</li>
+               <li>Plain-language walkthrough</li>
+               <li>Reusable prompt, checklist, or guide</li>
+               <li>One-time payment; no subscription</li>
+             </ul>
+           </div>
+         </section>
 
-        <section>
-          <h2>About the Founder</h2>
-          <p>Hi, I'm Tiffani. I'm an AI consultant and product leader with more than a decade of experience helping people complete real tasks using practical tools and clear instructions.</p>
-          <p>Affordable Everyday AI Consulting began by helping family and friends organize emails, format resumes, and finish one-off tasks. Over time I discovered I loved both doing the work and showing people how they can use AI to help them next time.</p>
-          <p>My goal is simple: solve today’s problem and leave you more confident to solve tomorrow’s.</p>
-        </section>
-      </div>
+         <section>
+           <h2>About the Founder</h2>
+           <p>Hi, I'm Tiffani. I'm an AI consultant and product leader with more than a decade of experience helping people complete real tasks using practical tools and clear instructions.</p>
+           <p>Affordable Everyday AI Consulting began by helping family and friends organize emails, format resumes, and finish one-off tasks. Over time I discovered I loved both doing the work an[...]
+           <p>My goal is simple: solve today’s problem and leave you more confident to solve tomorrow’s.</p>
+         </section>
+       </div>
 
-      <aside>
-        <section id="contact">
-          <h2>Request a Consultation</h2>
+       <aside>
+         <section id="contact">
+           <h2>Request a Consultation</h2>
 
-          <p class="form-note" style="margin-top:8px;">Complete a simple 7-question contact form and we’ll follow up with scheduling instructions.</p>
+           <p class="form-note" style="margin-top:8px;">Complete a simple 7-question contact form and we’ll follow up with scheduling instructions.</p>
 
-          <a class="button" href="https://forms.gle/Uqa5aanAKidWrTNv9" target="_blank" rel="noopener">Tell Us What You Need</a>
-        </section>
-      </aside>
-    </div>
-  </main>
+           <a class="button" href="https://forms.gle/Uqa5aanAKidWrTNv9" target="_blank" rel="noopener">Tell Us What You Need</a>
+         </section>
+       </aside>
+     </div>
+   </main>
 
-  <footer>
-    <div class="container">© 2026 Affordable Everyday AI Consulting. Practical AI help for everyday goals.</div>
-  </footer>
-</body>
-</html>
+   <footer>
+     <div class="container">© 2026 Affordable Everyday AI Consulting. Practical AI help for everyday goals.</div>
+   </footer>
+ </body>
+ </html>
