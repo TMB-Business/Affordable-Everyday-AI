@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Clear AEAI pricing for practical, human AI help with everyday tasks and business workflows." />
+  <title>Pricing | Affordable Everyday AI Consulting</title>
+  <style>
+    :root {
+      --teal: #0B5D56;
+      --coral: #FF6B5E;
+      --gold: #FFC857;
+      --sky: #4CC9F0;
+      --cream: #FFF8ED;
+      --ink: #173042;
+      --muted: #526575;
+      --white: #FFFFFF;
+      --line: rgba(23, 48, 66, .14);
+      --shadow: 0 14px 34px rgba(23, 48, 66, .08);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--cream); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--sky); outline-offset: 4px; }
+    .container { width: min(1160px, 92%); margin: 0 auto; }
+
+    header { background: var(--teal); color: var(--white); padding: 18px 0; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { color: var(--white); text-decoration: none; font-weight: 800; line-height: 1.15; max-width: 230px; }
+    .menu-wrap { position: relative; }
+    .menu-button { display: inline-flex; align-items: center; gap: 10px; border: 2px solid rgba(255,255,255,.8); border-radius: 999px; padding: 9px 14px; background: transparent; color: var(--white); font: inherit; font-weight: 800; cursor: pointer; }
+    .menu-icon { display: grid; gap: 4px; width: 20px; }
+    .menu-icon span { display: block; height: 2px; background: currentColor; border-radius: 2px; }
+    .menu { position: absolute; right: 0; top: calc(100% + 10px); z-index: 5; min-width: 180px; padding: 8px; background: var(--white); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+    .menu[hidden] { display: none; }
+    .menu a { display: block; padding: 10px 12px; color: var(--ink); text-decoration: none; font-weight: 700; border-radius: 9px; }
+    .menu a:hover, .menu a[aria-current="page"] { background: var(--cream); color: var(--teal); }
+
+    main { padding: 72px 0 96px; }
+    .intro { max-width: 760px; margin-bottom: 48px; }
+    .eyebrow { margin: 0 0 12px; color: var(--teal); font-size: .82rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    h1, h2, h3 { line-height: 1.12; }
+    h1 { max-width: 800px; margin: 0 0 20px; color: var(--teal); font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -.05em; }
+    h2 { margin: 0 0 14px; color: var(--teal); font-size: clamp(1.8rem, 3vw, 2.5rem); }
+    h3 { margin: 0; font-size: 1.35rem; }
+    p { color: var(--muted); margin: 0 0 14px; }
+    .lead { max-width: 700px; font-size: clamp(1.08rem, 2vw, 1.3rem); }
+    .button { display: inline-block; padding: 13px 20px; border-radius: 999px; background: var(--coral); color: var(--white); text-decoration: none; font-weight: 800; }
+    .button:hover { filter: brightness(.96); }
+
+    .offers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .offer { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 26px; box-shadow: var(--shadow); }
+    .offer--bundle { border-color: var(--gold); box-shadow: 0 14px 34px rgba(255, 200, 87, .18); }
+    .offer--partnership { background: var(--teal); color: var(--white); }
+    .offer--partnership p, .offer--partnership .best-for { color: rgba(255,255,255,.86); }
+    .offer--partnership h3 { color: var(--white); }
+    .offer-top { display: flex; justify-content: space-between; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+    .positioning { margin-top: 6px; color: var(--teal); font-weight: 800; }
+    .offer--partnership .positioning { color: var(--gold); }
+    .price { margin: 2px 0 16px; color: var(--teal); font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; line-height: 1.05; }
+    .offer--partnership .price { color: var(--gold); }
+    .price small { display: block; margin-top: 6px; color: var(--muted); font-size: .88rem; font-weight: 700; line-height: 1.3; }
+    .offer--partnership .price small { color: rgba(255,255,255,.78); }
+    .best-for { min-height: 52px; font-size: .97rem; }
+    .offer ul { margin: 8px 0 24px; padding-left: 21px; color: var(--muted); }
+    .offer--partnership ul { color: rgba(255,255,255,.9); }
+    .offer li { margin-bottom: 8px; }
+    .offer .button { align-self: flex-start; margin-top: auto; }
+    .offer--partnership .button { background: var(--gold); color: var(--ink); }
+    .save { display: inline-block; margin-bottom: 12px; padding: 5px 10px; border-radius: 999px; background: var(--gold); color: var(--ink); font-size: .82rem; font-weight: 800; }
+
+    .section { margin-top: 72px; }
+    .section-intro { max-width: 660px; margin-bottom: 24px; }
+    .choice-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .choice-list li { padding: 18px; background: var(--white); border: 1px solid var(--line); border-top: 5px solid var(--coral); border-radius: 14px; }
+    .choice-list li:nth-child(2) { border-top-color: var(--sky); }
+    .choice-list li:nth-child(3) { border-top-color: var(--gold); }
+    .choice-list li:nth-child(4) { border-top-color: var(--teal); }
+    .choice-list li:nth-child(5) { border-top-color: var(--coral); }
+    .choice-list strong { display: block; margin-bottom: 7px; color: var(--teal); }
+    .choice-list span { color: var(--muted); font-size: .94rem; }
+
+    .policies { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .policy { padding: 24px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); }
+    .policy h3 { margin-bottom: 10px; color: var(--teal); font-size: 1.1rem; }
+    .policy ul { margin: 0; padding-left: 21px; color: var(--muted); }
+    .policy li { margin-bottom: 9px; }
+    .closing { margin-top: 72px; padding: 40px; background: var(--teal); border-radius: var(--radius-lg); text-align: center; }
+    .closing h2 { color: var(--white); }
+    .closing p { max-width: 620px; margin: 0 auto 22px; color: rgba(255,255,255,.86); }
+
+    footer { padding: 0 0 56px; color: var(--muted); text-align: center; font-size: .95rem; }
+
+    @media (max-width: 900px) {
+      .choice-list { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      main { padding-top: 48px; }
+      .offers, .policies, .choice-list { grid-template-columns: 1fr; }
+      .offer-top { flex-direction: column; }
+      .best-for { min-height: 0; }
+      .closing { padding: 30px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/">Affordable Everyday AI Consulting</a>
+      <div class="menu-wrap">
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Menu</span>
+        </button>
+        <nav id="site-menu" class="menu" aria-label="Main navigation" hidden>
+          <a href="/">Home</a>
+          <a href="/pricing/" aria-current="page">Pricing</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">AI Solutions for Real Life</p>
+      <h1 id="page-title">Practical AI help for what you need to get done.</h1>
+      <p class="lead">Choose the kind of support that fits your next step. AEAI can complete a defined task, guide you through a workflow, build a solution, or be your ongoing business partner. Pricing and scope are clear, and no technical expertise is required to get started.</p>
+      <a class="button" href="https://forms.gle/Uqa5aanAKidWrTNv9" target="_blank" rel="noopener">Tell us what you need</a>
+    </section>
+
+    <section aria-labelledby="offers-title">
+      <div class="section-intro">
+        <p class="eyebrow">Choose your next step</p>
+        <h2 id="offers-title">Five ways to move forward</h2>
+        <p>Every offer starts with a clear request. We’ll review the scope, confirm the fit, and walk you through what happens next.</p>
+      </div>
+      <div class="offers">
+        <article class="offer">
+          <div class="offer-top"><div><h3>Everyday Win</h3><p class="positioning">Do it for me.</p></div></div>
+          <div class="price">$99 first project / $149 returning</div>
+          <p class="best-for"><strong>Best for:</strong> One small, clearly defined task you want completed.</p>
+          <ul>
+            <li>Résumé help, research, travel plans, planning documents, and similar bounded projects.</li>
+            <li>Three 15-minute consultations: initial review, delivery, and an optional follow-up.</li>
+            <li>No revisions or change-of-mind adjustments; errors or work that misses the agreed request are corrected at no charge.</li>
+            <li>Timing is confirmed when the project is accepted. The $99 introductory price is available once per new customer.</li>
+          </ul>
+          <a class="button" href="https://forms.gle/Uqa5aanAKidWrTNv9" target="_blank" rel="noopener">Tell us what you need</a>
+        </article>
+
+        <article class="offer">
+          <div class="offer-top"><div><h3>AI Guided Upgrade</h3><p class="positioning">Teach me to do it.</p></div></div>
+          <div class="price">$249</div>
+          <p class="best-for"><strong>Best for:</strong> One clearly defined AI goal or workflow you want to learn with personal guidance.</p>
+          <ul>
+            <li>Existing intake process and a 15-minute pre-meeting to assess the request.</li>
+            <li>One 60-minute personalized guided session.</li>
+            <li>One personalized reference video demonstrating the process covered.</li>
+            <li>One optional 15-minute follow-up when scheduled. You participate while AEAI teaches and guides.</li>
+          </ul>
+          <a class="button" href="https://forms.gle/Uqa5aanAKidWrTNv9" target="_blank" rel="noopener">Tell us what you need</a>
+        </article>
+
+        <article class="offer offer--bundle">
+          <span class="save">Save $148</span>
+          <div class="offer-top"><div><h3>Everyday Bundle</h3><p class="positioning">Help me get more done.</p></div></div>
+          <div class="price">$399 one-time</div>
+          <p class="best-for"><strong>Best for:</strong> Several unrelated needs you want to tackle over time.</p>
+          <ul>
+            <li>Two Everyday Wins and one AI Guided Upgrade.</li>
+            <li>Standalone value: $547 based on returning-customer pricing.</li>
+            <li>All components must be used within 120 days of purchase.</li>
+            <li>Components are not transferable. No substitutions; each follows its individual service rules.</li>
+          </ul>
+          <a class="button" href="https://forms.gle/Uqa5aanAKidWrTNv9" target="_blank" rel="noopener">Tell us what you need</a>
+        </article>
+
+        <article class="offer">
+          <div class="offer-top"><div><h3>AI Business Upgrade</h3><p class="positioning">Build it for me.</p></div></div>
+          <div class="price">Starting at $599</div>
+          <p class="best-for"><strong>Best for:</strong> One clearly defined AI-powered solution or workflow of standard complexity.</p>
+          <ul>
+            <li>One 15-minute pre-meeting, two 30-minute consultations, and one consolidated adjustment round.</li>
+            <li>Examples include a straightforward automation, assistant, agent, avatar, or instructional-video workflow.</li>
+            <li>New functionality, changed requirements, and expanded scope are quoted separately.</li>
+            <li>Complex integrations, custom software, extensive migration, enterprise systems, and work outside standard scope are typically excluded.</li>
+          </ul>
+          <a class="button" href="https://forms.gle/Uqa5aanAKidWrTNv9" target="_blank" rel="noopener">Tell us what you need</a>
+        </article>
+
+        <article class="offer offer--partnership">
+          <div class="offer-top"><div><h3>Business Partnership</h3><p class="positioning">Be my ongoing AI partner.</p></div></div>
+          <div class="price">$499/month<small>Initial commitment: six months, totaling $2,994</small></div>
+          <p class="best-for"><strong>Best for:</strong> Recurring business support with a clear monthly entitlement.</p>
+          <ul>
+            <li>Up to four qualifying Everyday Wins or one Standard AI Business Upgrade per month.</li>
+            <li>Other combinations may be determined with the client when appropriate.</li>
+            <li>Services do not roll over and expire at the end of each billing period. The full monthly fee applies even when unused.</li>
+            <li>Scheduling is standard first-in, first-out. Third-party fees are separate unless explicitly included.</li>
+          </ul>
+          <a class="button" href="https://forms.gle/Uqa5aanAKidWrTNv9" target="_blank" rel="noopener">Tell us what you need</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="choose-title">
+      <div class="section-intro"><p class="eyebrow">Not sure where to start?</p><h2 id="choose-title">Find the right fit</h2></div>
+      <ul class="choice-list">
+        <li><strong>Need one defined task completed?</strong><span>Everyday Win</span></li>
+        <li><strong>Want to learn one workflow?</strong><span>AI Guided Upgrade</span></li>
+        <li><strong>Have several unrelated needs?</strong><span>Everyday Bundle</span></li>
+        <li><strong>Need a workflow or solution built?</strong><span>AI Business Upgrade</span></li>
+        <li><strong>Need recurring business support?</strong><span>Business Partnership</span></li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="policies-title">
+      <div class="section-intro"><p class="eyebrow">Clear from the start</p><h2 id="policies-title">A few helpful expectations</h2></div>
+      <div class="policies">
+        <div class="policy"><h3>We’ll confirm the fit</h3><ul><li>AEAI confirms whether a request qualifies for a packaged service.</li><li>Larger or more complex requests may be reduced in scope, moved to another service, or custom quoted.</li><li>Timing is confirmed after the request has been reviewed.</li></ul></div>
+        <div class="policy"><h3>You don’t need the technical answer</h3><ul><li>You do not need to know which AI tool or prompt you need before contacting AEAI.</li><li>Third-party software, subscriptions, platform fees, and similar external costs are separate unless specifically stated.</li><li>Start by describing the result you want. We’ll help determine the right next step.</li></ul></div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <h2 id="closing-title">Let’s get it done.</h2>
+      <p>Tell us what you need in plain language. AEAI will help determine the right service and scope—no technical explanation required.</p>
+      <a class="button" href="https://forms.gle/Uqa5aanAKidWrTNv9" target="_blank" rel="noopener">Tell us what you need</a>
+    </section>
+  </main>
+
+  <footer><div class="container">© 2026 Affordable Everyday AI Consulting. Practical AI help for everyday goals.</div></footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const menu = document.querySelector('#site-menu');
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menu.hidden = isOpen;
+    });
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.menu-wrap')) {
+        menu.hidden = true;
+        menuButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        menu.hidden = true;
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.focus();
+      }
+    });
+  </script>
+</body>
+</html>
